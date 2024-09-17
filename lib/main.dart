@@ -7,10 +7,6 @@ void main() {
 class MyApp extends StatelessWidget {
    MyApp({super.key});
 
-  List<String> names=[
-    'Ahmed', 'Ali', 'Omar', 'Hassan', 'Yusuf', 'Zain', 'Ibrahim', 'Bilal', 'Saif', 'Khalid', 'Fahad', 'Salman', 'Imran', 'Mustafa', 'Ayman', 'Rashid', 'Tariq', 'Hamza', 'Adnan', 'Sulaiman'
-  ];
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,18 +15,29 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue,
           title: Text('Challange.'),
           ),
-        body: ListView.builder(
-          itemCount: names.length,
-          itemBuilder:(BuildContext context,int ind){
-            return Padding(
-              padding: const EdgeInsets.all(2),
-              child: ListTile(
-                tileColor: Colors.grey[200],
-                title: Text(names[ind]),
-              ),
-            );
-          } 
-          ),
+        body:GridView(
+          padding: EdgeInsets.all(1),
+          cacheExtent: 5,
+          gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3) ,
+          children: [
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2dVbLMzlaeJnL5C6RpZ8HLRECJhH6ILEGKg&s'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT26MP9f5YdlTfN-2pikGFAXSyfPfT7l-wdhA&s'),
+            Image.network(fit: BoxFit.cover,'https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm2-IiCQnnEHH1dk5HN2K60xrv8Wyu8VRW7Q&s'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVEll8uICS2xqheOz2l1Vh1DcvpEyxgVrNfw&s'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdNQQ7fhk27ymnygeeOof3wJ0lu-4Z18qKlA&s'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2dVbLMzlaeJnL5C6RpZ8HLRECJhH6ILEGKg&s'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT26MP9f5YdlTfN-2pikGFAXSyfPfT7l-wdhA&s'),
+            Image.network(fit: BoxFit.cover,'https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm2-IiCQnnEHH1dk5HN2K60xrv8Wyu8VRW7Q&s'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVEll8uICS2xqheOz2l1Vh1DcvpEyxgVrNfw&s'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdNQQ7fhk27ymnygeeOof3wJ0lu-4Z18qKlA&s'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdNQQ7fhk27ymnygeeOof3wJ0lu-4Z18qKlA&s'),
+            Image.network(fit: BoxFit.cover,'https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630'),
+            Image.network(fit: BoxFit.cover,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVEll8uICS2xqheOz2l1Vh1DcvpEyxgVrNfw&s'),
+            
+          ],
+          )
       ),
     );
   }
